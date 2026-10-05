@@ -18,6 +18,15 @@ void main(){
   print('Vehiculo con mas bateria: ${mejorBateria.id}');
   print('Bateria: ${mejorBateria.bateria}%');
   print('Estado:-- ${mejorBateria.estadoBat()}');
+
+  print("Vehiculos sin uso y con menos de 20% de bateria: ");
+  print(flota.where((c) => !c.enUso && c.bateria > 20).toList());
+
+  User user = User.nou(
+    id: "F",
+    name: "Nestor Schierse Galey",
+    email: "nestorschierse@paucasesnovescifp.cat",
+  );
 }
 
 class User{
